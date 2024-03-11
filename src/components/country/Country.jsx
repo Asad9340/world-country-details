@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-function Country({ country, handleCount }) {
+function Country({ country, handleCount, handleMark }) {
   const [visited, setVisited] = useState(false);
   const { flags, name, capital, continents, area, independent } = country;
 
@@ -39,8 +39,11 @@ function Country({ country, handleCount }) {
         >
           {visited ? 'Visited' : 'Going'}
         </button>
-        <button className="py-2 px-6 bg-indigo-700 hover:bg-indigo-800 border border-indigo-800 hover:border hover:border-red-900 text-white rounded-lg outline-none">
-          Mark
+        <button
+          onClick={() => handleMark(country)}
+          className="py-2 px-4 bg-indigo-700 hover:bg-indigo-800 border border-indigo-800 hover:border hover:border-red-900 text-white rounded-lg outline-none"
+        >
+          Marked Read
         </button>
         <button
           onClick={handleCount}
