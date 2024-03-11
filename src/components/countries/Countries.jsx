@@ -29,10 +29,10 @@ export default function Countries() {
         Click Counter :
         <span className="text-red-700 font-extrabold">{count}</span>
       </h3>
-      <div className="text-center my-3">
+      <div className="text-center my-3 flex gap-6 flex-wrap justify-center">
         {mark.map((country, index) => (
           <div key={index} className='flex justify-center flex-col items-center'>
-            <img src={country.flags.png}></img>
+            <img className='rounded-lg h-20' src={country.flags.png}></img>
             <li className="my-1 list-none text-2xl font-bold">{country.name.common}</li>
           </div>
         ))}
