@@ -1,1 +1,1 @@
-[live link] (world-countries-details.surge.sh)
+[live link] (http://world-countries-details.surge.sh/)
